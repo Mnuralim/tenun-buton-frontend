@@ -55,21 +55,19 @@ const Index = () => {
         >
           {data.products.map((data, index) => (
             <SwiperSlide key={index}>
-              <div>
-                <ProductCard
-                  {...data}
-                  width={{
-                    sm: '115px',
-                    md: '150px',
-                    lg: '350px',
-                  }}
-                  height={{
-                    sm: '138px',
-                    md: '180px',
-                    lg: '441px',
-                  }}
-                />
-              </div>
+              <ProductCard
+                {...data}
+                width={{
+                  sm: '115px',
+                  md: '150px',
+                  lg: '350px',
+                }}
+                height={{
+                  sm: '138px',
+                  md: '180px',
+                  lg: '441px',
+                }}
+              />
             </SwiperSlide>
           ))}
         </Swiper>

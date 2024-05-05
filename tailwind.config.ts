@@ -14,6 +14,10 @@ const config: Config = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         'about-us': "url('/img/Ikat Weave 1 (1).png')",
+        auth: "url('/img/hands-sewing.jpg')",
+      },
+      boxShadow: {
+        'custom-shadow': '0px 4px 4px rgba(0, 0, 0, 0.25)',
       },
       colors: {
         primary: '#00246B',

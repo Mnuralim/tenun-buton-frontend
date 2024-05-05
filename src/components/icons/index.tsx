@@ -20,6 +20,26 @@ export const HamburgerIcon = ({
   )
 }
 
+export const HamburgerIcon2 = ({
+  props,
+}: {
+  props?: {
+    svgProps?: React.SVGProps<SVGSVGElement>
+    lineProps?: React.SVGProps<SVGLineElement>
+  }
+  iconColor?: string
+  width?: number
+  height?: number
+}) => {
+  return (
+    <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg" {...props?.svgProps}>
+      <line x1="2.01597e-09" y1="1" x2="18" y2="1" stroke="#00246B" strokeWidth="2" {...props?.lineProps} />
+      <line x1="2.01597e-09" y1="6" x2="18" y2="6" stroke="#00246B" strokeWidth="2" {...props?.lineProps} />
+      <line y1="11" x2="18" y2="11" stroke="#00246B" strokeWidth="2" {...props?.lineProps} />
+    </svg>
+  )
+}
+
 export const SignInIcon = ({
   props,
 }: {
@@ -74,6 +94,114 @@ export const searchIcon = ({
   )
 }
 
+export const ArrowBackIosIcon = ({
+  props,
+  iconColor,
+  height,
+  width,
+}: {
+  props?: {
+    svgProps?: React.SVGProps<SVGSVGElement>
+    pathProps?: React.SVGProps<SVGPathElement>
+  }
+  iconColor?: string
+  width?: number
+  height?: number
+}) => {
+  return (
+    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" {...props?.svgProps}>
+      <g clipPath="url(#clip0_428_9214)">
+        <rect
+          width="23.9999"
+          height="23.5556"
+          transform="matrix(-0.0105501 0.999944 -0.99994 -0.0109519 24.5298 0.257812)"
+          fill="#D9D9D9"
+        />
+        <path
+          d="M20.547 17.7255L22.3029 15.9646L12.6911 5.96878L2.87057 15.7618L4.58902 17.5507L12.6538 9.50857L20.547 17.7255Z"
+          fill={iconColor || '#393939'}
+          {...props?.pathProps}
+        />
+      </g>
+      <defs>
+        <clipPath id="clip0_428_9214">
+          <rect
+            width="23.9999"
+            height="23.5556"
+            fill="white"
+            transform="matrix(-0.0105501 0.999944 -0.99994 -0.0109519 24.5298 0.257812)"
+          />
+        </clipPath>
+      </defs>
+    </svg>
+  )
+}
+
+export const ZoomOutMapIcon = ({
+  props,
+  iconColor,
+  height,
+  width,
+}: {
+  props?: {
+    svgProps?: React.SVGProps<SVGSVGElement>
+    pathProps?: React.SVGProps<SVGPathElement>
+  }
+  iconColor?: string
+  width?: number
+  height?: number
+}) => {
+  return (
+    <svg width="40" height="43" viewBox="0 0 40 43" fill="none" xmlns="http://www.w3.org/2000/svg" {...props?.svgProps}>
+      <g clipPath="url(#clip0_428_9218)" filter="url(#filter0_dd_428_9218)">
+        <path
+          d="M25 5L28.8333 8.83333L24.0167 13.6167L26.3833 15.9833L31.1667 11.1667L35 15V5H25ZM5 15L8.83333 11.1667L13.6167 15.9833L15.9833 13.6167L11.1667 8.83333L15 5H5V15ZM15 35L11.1667 31.1667L15.9833 26.3833L13.6167 24.0167L8.83333 28.8333L5 25V35H15ZM35 25L31.1667 28.8333L26.3833 24.0167L24.0167 26.3833L28.8333 31.1667L25 35H35V25Z"
+          fill="#F3F3F3"
+        />
+      </g>
+      <defs>
+        <filter
+          id="filter0_dd_428_9218"
+          x="-4"
+          y="0"
+          width="48"
+          height="48"
+          filterUnits="userSpaceOnUse"
+          colorInterpolationFilters="sRGB"
+        >
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
+          <feColorMatrix
+            in="SourceAlpha"
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+            result="hardAlpha"
+          />
+          <feOffset dy="4" />
+          <feGaussianBlur stdDeviation="2" />
+          <feComposite in2="hardAlpha" operator="out" />
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_428_9218" />
+          <feColorMatrix
+            in="SourceAlpha"
+            type="matrix"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+            result="hardAlpha"
+          />
+          <feOffset dy="4" />
+          <feGaussianBlur stdDeviation="2" />
+          <feComposite in2="hardAlpha" operator="out" />
+          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+          <feBlend mode="normal" in2="effect1_dropShadow_428_9218" result="effect2_dropShadow_428_9218" />
+          <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_428_9218" result="shape" />
+        </filter>
+        <clipPath id="clip0_428_9218">
+          <rect width="40" height="40" fill="white" />
+        </clipPath>
+      </defs>
+    </svg>
+  )
+}
+
 export const PhoneIcon = ({
   props,
   iconColor,
@@ -100,6 +228,38 @@ export const PhoneIcon = ({
       <defs>
         <clipPath id="clip0_428_11304">
           <rect width="20" height="20" fill="white" />
+        </clipPath>
+      </defs>
+    </svg>
+  )
+}
+
+export const InfoIcon = ({
+  props,
+  iconColor,
+  height,
+  width,
+}: {
+  props?: {
+    svgProps?: React.SVGProps<SVGSVGElement>
+    pathProps?: React.SVGProps<SVGPathElement>
+  }
+  iconColor?: string
+  width?: number
+  height?: number
+}) => {
+  return (
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...props?.svgProps}>
+      <g clip-path="url(#clip0_428_9249)">
+        <path
+          d="M11 7H13V9H11V7ZM11 11H13V17H11V11ZM12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z"
+          fill="#393939"
+          {...props?.pathProps}
+        />
+      </g>
+      <defs>
+        <clipPath id="clip0_428_9249">
+          <rect width="24" height="24" fill="white" />
         </clipPath>
       </defs>
     </svg>
@@ -149,6 +309,38 @@ export const InstagramIcon = ({
       <defs>
         <clipPath id="clip0_428_11303">
           <rect width="16" height="16" fill="white" />
+        </clipPath>
+      </defs>
+    </svg>
+  )
+}
+
+export const FilterListIcon = ({
+  props,
+  iconColor,
+  height,
+  width,
+}: {
+  props?: {
+    svgProps?: React.SVGProps<SVGSVGElement>
+    pathProps?: React.SVGProps<SVGPathElement>
+  }
+  iconColor?: string
+  width?: number
+  height?: number
+}) => {
+  return (
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" {...props?.svgProps}>
+      <g clipPath="url(#clip0_428_6986)">
+        <path
+          d="M8.33333 15H11.6667V13.3333H8.33333V15ZM2.5 5V6.66667H17.5V5H2.5ZM5 10.8333H15V9.16667H5V10.8333Z"
+          fill={iconColor ? iconColor : '#D9D9D9'}
+          {...props?.pathProps}
+        />
+      </g>
+      <defs>
+        <clipPath id="clip0_428_6986">
+          <rect width="20" height="20" fill="white" />
         </clipPath>
       </defs>
     </svg>
@@ -525,6 +717,123 @@ export const ArrowBackIcon = ({
   )
 }
 
+export const ArrowBackIcon2 = ({
+  props,
+  iconColor,
+  height,
+  width,
+}: {
+  props?: {
+    svgProps?: React.SVGProps<SVGSVGElement>
+    pathProps?: React.SVGProps<SVGPathElement>
+  }
+  iconColor?: string
+  width?: number
+  height?: number
+}) => {
+  return (
+    <svg
+      width={width ? width : 20}
+      height={height ? height : 20}
+      viewBox="0 0 20 20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props?.svgProps}
+    >
+      <g clipPath="url(#clip0_428_7411)">
+        <path
+          d="M16.6667 9.16658H6.52504L11.1834 4.50825L10 3.33325L3.33337 9.99992L10 16.6666L11.175 15.4916L6.52504 10.8333H16.6667V9.16658Z"
+          fill={iconColor ? iconColor : '#00246B'}
+          {...props?.pathProps}
+        />
+      </g>
+      <defs>
+        <clipPath id="clip0_428_7411">
+          <rect width="20" height="20" fill="white" />
+        </clipPath>
+      </defs>
+    </svg>
+  )
+}
+
+export const RemoveIcon = ({
+  props,
+  iconColor,
+  height,
+  width,
+}: {
+  props?: {
+    svgProps?: React.SVGProps<SVGSVGElement>
+    pathProps?: React.SVGProps<SVGPathElement>
+  }
+  iconColor?: string
+  width?: number
+  height?: number
+}) => {
+  return (
+    <svg
+      width={width ? width : 20}
+      height={height ? height : 20}
+      viewBox="0 0 20 20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props?.svgProps}
+    >
+      <g clip-path="url(#clip0_428_7521)">
+        <path
+          d="M15.8333 10.8333H4.16663V9.16663H15.8333V10.8333Z"
+          fill={iconColor ? iconColor : '#393939'}
+          {...props?.pathProps}
+        />
+      </g>
+      <defs>
+        <clipPath id="clip0_428_7521">
+          <rect width="20" height="20" fill="white" />
+        </clipPath>
+      </defs>
+    </svg>
+  )
+}
+
+export const AddIcon = ({
+  props,
+  iconColor,
+  height,
+  width,
+}: {
+  props?: {
+    svgProps?: React.SVGProps<SVGSVGElement>
+    pathProps?: React.SVGProps<SVGPathElement>
+  }
+  iconColor?: string
+  width?: number
+  height?: number
+}) => {
+  return (
+    <svg
+      width={width ? width : 20}
+      height={height ? height : 20}
+      viewBox="0 0 20 20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props?.svgProps}
+    >
+      <g clip-path="url(#clip0_428_7520)">
+        <path
+          d="M15.8334 10.8333H10.8334V15.8333H9.16669V10.8333H4.16669V9.16663H9.16669V4.16663H10.8334V9.16663H15.8334V10.8333Z"
+          fill={iconColor ? iconColor : '#393939'}
+          {...props?.pathProps}
+        />
+      </g>
+      <defs>
+        <clipPath id="clip0_428_7520">
+          <rect width="20" height="20" fill="white" />
+        </clipPath>
+      </defs>
+    </svg>
+  )
+}
+
 export const PersonIcon = ({
   props,
   iconColor,
@@ -704,7 +1013,7 @@ export const TuneIcon = ({
       xmlns="http://www.w3.org/2000/svg"
       {...props?.svgProps}
     >
-      <g clip-path="url(#clip0_428_6638)">
+      <g clipPath="url(#clip0_428_6638)">
         <path
           d="M14.1667 17.5H15.8333L15.8333 12.5H14.1667L14.1667 17.5ZM4.16667 17.5H5.83333L5.83333 9.16667H4.16667L4.16667 17.5ZM17.5 9.16667H15.8333L15.8333 2.5L14.1667 2.5L14.1667 9.16667H12.5V10.8333H17.5V9.16667ZM7.5 14.1667H9.16667V17.5L10.8333 17.5V14.1667H12.5L12.5 12.5L7.5 12.5V14.1667ZM10.8333 2.5H9.16667L9.16667 10.8333H10.8333L10.8333 2.5ZM7.5 7.5V5.83333L5.83333 5.83333L5.83333 2.5H4.16667L4.16667 5.83333H2.5L2.5 7.5L7.5 7.5Z"
           fill={iconColor ? iconColor : '#D9D9D9'}
@@ -937,13 +1246,34 @@ export const VerifiedIcon = (props: React.SVGProps<SVGSVGElement>) => {
   )
 }
 
-export const BookmarkBorderIcon = (props: React.SVGProps<SVGSVGElement>) => {
+export const BookmarkBorderIcon = ({
+  props,
+  iconColor,
+  height,
+  width,
+}: {
+  props?: {
+    svgProps?: React.SVGProps<SVGSVGElement>
+    pathProps?: React.SVGProps<SVGPathElement>
+  }
+  iconColor?: string
+  width?: number
+  height?: number
+}) => {
   return (
-    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <svg
+      width={width ? width : 10}
+      height={height ? height : 10}
+      viewBox="0 0 10 10"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props?.svgProps}
+    >
       <g clipPath="url(#clip0_428_7269)">
         <path
           d="M7.08325 1.25H2.91659C2.45825 1.25 2.08325 1.625 2.08325 2.08333V8.75L4.99992 7.5L7.91658 8.75V2.08333C7.91658 1.625 7.54158 1.25 7.08325 1.25ZM7.08325 7.5L4.99992 6.59167L2.91659 7.5V2.08333H7.08325V7.5Z"
-          fill="#00246B"
+          fill={iconColor ? iconColor : '#00246B'}
+          {...props?.pathProps}
         />
       </g>
       <defs>
@@ -955,18 +1285,135 @@ export const BookmarkBorderIcon = (props: React.SVGProps<SVGSVGElement>) => {
   )
 }
 
-export const BookmarkIcon = (props: React.SVGProps<SVGSVGElement>) => {
+export const BookmarkIcon = ({
+  props,
+  iconColor,
+  height,
+  width,
+}: {
+  props?: {
+    svgProps?: React.SVGProps<SVGSVGElement>
+    pathProps?: React.SVGProps<SVGPathElement>
+  }
+  iconColor?: string
+  width?: number
+  height?: number
+}) => {
   return (
-    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
+    <svg
+      width={width ? width : 10}
+      height={height ? height : 10}
+      viewBox="0 0 10 10"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props?.svgProps}
+    >
       <g clipPath="url(#clip0_428_7254)">
         <path
           d="M7.08325 1.25H2.91659C2.45825 1.25 2.08325 1.625 2.08325 2.08333V8.75L4.99992 7.5L7.91658 8.75V2.08333C7.91658 1.625 7.54158 1.25 7.08325 1.25Z"
-          fill="#00246B"
+          fill={iconColor ? iconColor : '#00246B'}
+          {...props?.pathProps}
         />
       </g>
       <defs>
         <clipPath id="clip0_428_7254">
           <rect width="10" height="10" fill="white" />
+        </clipPath>
+      </defs>
+    </svg>
+  )
+}
+
+export const ShareIcon = ({
+  props,
+  iconColor,
+  height,
+  width,
+}: {
+  props?: {
+    svgProps?: React.SVGProps<SVGSVGElement>
+    pathProps?: React.SVGProps<SVGPathElement>
+  }
+  iconColor?: string
+  width?: number
+  height?: number
+}) => {
+  return (
+    <svg
+      width={width ? width : 20}
+      height={height ? height : 20}
+      viewBox="0 0 20 20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props?.svgProps}
+    >
+      <g clipPath="url(#clip0_428_7409)">
+        <path
+          d="M15 13.4001C14.3667 13.4001 13.8 13.6501 13.3667 14.0417L7.425 10.5834C7.46667 10.3917 7.5 10.2001 7.5 10.0001C7.5 9.80008 7.46667 9.60842 7.425 9.41675L13.3 5.99175C13.75 6.40841 14.3417 6.66675 15 6.66675C16.3833 6.66675 17.5 5.55008 17.5 4.16675C17.5 2.78341 16.3833 1.66675 15 1.66675C13.6167 1.66675 12.5 2.78341 12.5 4.16675C12.5 4.36675 12.5333 4.55841 12.575 4.75008L6.7 8.17508C6.25 7.75842 5.65833 7.50008 5 7.50008C3.61667 7.50008 2.5 8.61675 2.5 10.0001C2.5 11.3834 3.61667 12.5001 5 12.5001C5.65833 12.5001 6.25 12.2417 6.7 11.8251L12.6333 15.2917C12.5917 15.4667 12.5667 15.6501 12.5667 15.8334C12.5667 17.1751 13.6583 18.2667 15 18.2667C16.3417 18.2667 17.4333 17.1751 17.4333 15.8334C17.4333 14.4917 16.3417 13.4001 15 13.4001ZM15 3.33341C15.4583 3.33341 15.8333 3.70841 15.8333 4.16675C15.8333 4.62508 15.4583 5.00008 15 5.00008C14.5417 5.00008 14.1667 4.62508 14.1667 4.16675C14.1667 3.70841 14.5417 3.33341 15 3.33341ZM5 10.8334C4.54167 10.8334 4.16667 10.4584 4.16667 10.0001C4.16667 9.54175 4.54167 9.16675 5 9.16675C5.45833 9.16675 5.83333 9.54175 5.83333 10.0001C5.83333 10.4584 5.45833 10.8334 5 10.8334ZM15 16.6834C14.5417 16.6834 14.1667 16.3084 14.1667 15.8501C14.1667 15.3917 14.5417 15.0167 15 15.0167C15.4583 15.0167 15.8333 15.3917 15.8333 15.8501C15.8333 16.3084 15.4583 16.6834 15 16.6834Z"
+          fill={iconColor ? iconColor : '#00246B'}
+          {...props?.pathProps}
+        />
+      </g>
+      <defs>
+        <clipPath id="clip0_428_7409">
+          <rect width="20" height="20" fill="white" />
+        </clipPath>
+      </defs>
+    </svg>
+  )
+}
+
+export const EditIcon = ({
+  props,
+  iconColor,
+  height,
+  width,
+}: {
+  props?: {
+    svgProps?: React.SVGProps<SVGSVGElement>
+    pathProps?: React.SVGProps<SVGPathElement>
+  }
+  iconColor?: string
+  width?: number
+  height?: number
+}) => {
+  return (
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" {...props?.svgProps}>
+      <path
+        d="M9.71667 5.51667L10.4833 6.28333L2.93333 13.8333H2.16667V13.0667L9.71667 5.51667ZM12.7167 0.5C12.5083 0.5 12.2917 0.583333 12.1333 0.741667L10.6083 2.26667L13.7333 5.39167L15.2583 3.86667C15.5833 3.54167 15.5833 3.01667 15.2583 2.69167L13.3083 0.741667C13.1417 0.575 12.9333 0.5 12.7167 0.5ZM9.71667 3.15833L0.5 12.375V15.5H3.625L12.8417 6.28333L9.71667 3.15833Z"
+        fill="#393939"
+        {...props?.pathProps}
+      />
+    </svg>
+  )
+}
+
+export const ThumbUpIcon = ({
+  props,
+  iconColor,
+  height,
+  width,
+}: {
+  props?: {
+    svgProps?: React.SVGProps<SVGSVGElement>
+    pathProps?: React.SVGProps<SVGPathElement>
+  }
+  iconColor?: string
+  width?: number
+  height?: number
+}) => {
+  return (
+    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" {...props?.svgProps}>
+      <g clip-path="url(#clip0_428_7513)">
+        <path
+          d="M5.625 13.125H11.25C11.7688 13.125 12.2125 12.8125 12.4 12.3625L14.2875 7.95625C14.3438 7.8125 14.375 7.6625 14.375 7.5V6.25C14.375 5.5625 13.8125 5 13.125 5H9.18125L9.775 2.14375L9.79375 1.94375C9.79375 1.6875 9.6875 1.45 9.51875 1.28125L8.85625 0.625L4.7375 4.74375C4.5125 4.96875 4.375 5.28125 4.375 5.625V11.875C4.375 12.5625 4.9375 13.125 5.625 13.125ZM5.625 5.625L8.3375 2.9125L7.5 6.25H13.125V7.5L11.25 11.875H5.625V5.625ZM0.625 5.625H3.125V13.125H0.625V5.625Z"
+          fill="#393939"
+          {...props?.pathProps}
+        />
+      </g>
+      <defs>
+        <clipPath id="clip0_428_7513">
+          <rect width="15" height="15" fill="white" />
         </clipPath>
       </defs>
     </svg>

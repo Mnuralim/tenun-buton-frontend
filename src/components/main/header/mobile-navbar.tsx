@@ -6,6 +6,7 @@ import { Link } from 'react-scroll'
 import Image from 'next/image'
 import { SubMenu } from './sub-menu'
 import NextLink from 'next/link'
+import { usePathname } from 'next/navigation'
 
 interface Props {
   scrolling: boolean
@@ -16,6 +17,7 @@ const MobileNavbar = ({ scrolling, isLoggedIn }: Props) => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
   const [showSubmenu, setShowSubmenu] = useState<boolean>(false)
   const menuRef = useRef<HTMLDivElement>(null)
+  const pathname = usePathname()
 
   const toggleMenu = () => {
     setIsOpen((prev) => !prev)
@@ -52,10 +54,10 @@ const MobileNavbar = ({ scrolling, isLoggedIn }: Props) => {
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
-  })
+  }, [isOpen])
 
-  return (
-    <nav className="lg:hidden px-5 py-3 flex justify-between items-center">
+  return pathname.startsWith('/main/explore/cl') ? null : (
+    <nav className="flex items-center justify-between px-5 py-3 lg:hidden">
       <Icons.HamburgerIcon
         props={{
           svgProps: { onClick: toggleMenu },
@@ -115,7 +117,7 @@ const MobileNavbar = ({ scrolling, isLoggedIn }: Props) => {
           isOpen ? 'left-0' : 'left-[-100%]'
         }`}
       >
-        <div ref={menuRef} className="absolute h-full bg-primary w-5/6 flex flex-col p-3">
+        <div ref={menuRef} className="absolute flex flex-col w-5/6 h-full p-3 bg-primary">
           <div className="absolute top-7 right-5">
             <Icons.CloseIcon
               props={{

@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import * as Icons from '@/components/icons'
 import { signOut } from 'next-auth/react'
+import Link from 'next/link'
 
 interface Props {
   showSubmenu: boolean
@@ -37,8 +38,11 @@ export const SubMenu = ({ showSubmenu, setShowSubmenu }: Props) => {
 
   if (!showSubmenu) return null
   return (
-    <div ref={menuRef} className="w-32 shadow-large rounded-sm bg-primary2 p-2 flex flex-col gap-2">
-      <div className="flex items-center gap-1">
+    <div
+      ref={menuRef}
+      className="w-32 lg:w-44 custom-shadow rounded-[10px] border border-primary bg-primary2 py-2 px-1 flex flex-col"
+    >
+      <Link href={'/main/account'} className="flex items-center gap-1 hover:bg-[#C6C6C6] py-1 rounded px-1">
         <Icons.PersonIcon
           props={{
             svgProps: {
@@ -49,17 +53,20 @@ export const SubMenu = ({ showSubmenu, setShowSubmenu }: Props) => {
             },
           }}
         />
-        <p>Akun</p>
-      </div>
-      <div className="flex items-center gap-1">
+        <p className="text-sm lg:text-lg text-primary">Akun</p>
+      </Link>
+      <Link href={'/main/account'} className="flex items-center gap-1 hover:bg-[#C6C6C6] py-1 rounded px-1">
         <Icons.ShoppingCartIcon />
-        <p>Keranjang</p>
-      </div>
-      <div className="flex items-center gap-1">
+        <p className="text-sm lg:text-lg text-primary">Keranjang</p>
+      </Link>
+      <Link href={'/main/account'} className="flex items-center gap-1 hover:bg-[#C6C6C6] py-1 rounded px-1">
         <Icons.NotificationIcon />
-        <p>Notifikasi</p>
-      </div>
-      <div onClick={() => signOut()} className="flex items-center gap-1 ml-1 cursor-pointer">
+        <p className="text-sm lg:text-lg text-primary">Notifikasi</p>
+      </Link>
+      <div
+        onClick={() => signOut()}
+        className="flex items-center gap-1 ml-1 cursor-pointer hover:bg-[#C6C6C6] py-1 rounded px-1"
+      >
         <Icons.SignInIcon
           props={{
             svgProps: {
@@ -70,7 +77,7 @@ export const SubMenu = ({ showSubmenu, setShowSubmenu }: Props) => {
             },
           }}
         />
-        <p>Keluar</p>
+        <p className="text-sm lg:text-lg text-primary">Keluar</p>
       </div>
     </div>
   )

@@ -4,11 +4,11 @@ import Link from 'next/link'
 
 const FilterButton = () => {
   return (
-    <div>
+    <div className="lg:hidden">
       <Link
         href={'/main/explore/?filter=true'}
         scroll={false}
-        className="flex items-center w-fit gap-2 rounded px-2 py-2 bg-primary mt-10 mx-5"
+        className="flex items-center w-fit gap-2 rounded px-2 py-2 bg-primary mx-3"
       >
         <Icons.TuneIcon />
         <span className="text-white text-sm">Filter Produk</span>

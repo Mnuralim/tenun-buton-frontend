@@ -4,7 +4,6 @@ import { CreateLoginFormState } from '@/actions/next-auth-signin-credentials'
 import SubmitButton from '../button/submit-buton'
 import Link from 'next/link'
 import { CreateRegisterFormState } from '@/actions/register'
-import { toast } from 'react-toastify'
 import { useRouter } from 'next/navigation'
 
 interface Props {
@@ -24,7 +23,12 @@ const AuthForm = ({ title, googleAction, credentialAction, loginFormState, regis
   }
   return (
     <section className="h-screen items-center justify-center grid grid-cols-1 lg:grid-cols-2">
-      <div className="bg-[url('/img/hands-sewing.jpg')] bg-center bg-cover h-full hidden lg:block">
+      <div
+        className="bg-auth bg-center bg-cover w-full h-full hidden lg:block"
+        style={{
+          backgroundImage: "url('/img/hands-sewing.jpg')",
+        }}
+      >
         <div className="w-full h-full bg-black bg-opacity-35"></div>
       </div>
       <div className="h-full flex items-center justify-center flex-col px-5 gap-6 lg:px-32">

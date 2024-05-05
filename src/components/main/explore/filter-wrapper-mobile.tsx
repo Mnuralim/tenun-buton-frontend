@@ -7,7 +7,7 @@ interface Props {
   categories: ICategory[]
 }
 
-const FilterWrapper = ({ categories }: Props) => {
+const FilterWrapperForMobile = ({ categories }: Props) => {
   const { back } = useRouter()
   const searchParams = useSearchParams()
   const isShowDrawer = searchParams.get('filter') === 'true'
@@ -25,13 +25,15 @@ const FilterWrapper = ({ categories }: Props) => {
 
   return (
     <section
-      className={`fixed left-0 z-50 w-full h-full bg-primary2 bg-opacity-40 flex flex-col justify-end transform transition-all ease-linear duration-300 ${
+      className={`fixed left-0 z-50 w-full h-full bg-primary2 bg-opacity-40 flex flex-col justify-end transform transition-all ease-linear duration-300 lg:hidden ${
         isShowDrawer ? ' bottom-0' : 'bottom-[-100%]'
       } `}
     >
       <div className="bg-primary h-[87%] rounded-t-3xl overflow-y-auto pb-10">
         <div className="px-5">
-          <div onClick={handleCloseDrawer} className="border-primary2 border-b-3 mt-4 mx-auto w-9"></div>
+          <div className="absolute w-full left-0 bottom-[84%]">
+            <div onClick={handleCloseDrawer} className="border-primary2 border-b-3 mx-auto w-9"></div>
+          </div>
           <div className="my-7 flex items-center justify-between">
             <p className="text-white font-bold">Filter</p>
             <button className="text-[#AF7500] font-bold">Reset</button>
@@ -43,4 +45,4 @@ const FilterWrapper = ({ categories }: Props) => {
   )
 }
 
-export default FilterWrapper
+export default FilterWrapperForMobile

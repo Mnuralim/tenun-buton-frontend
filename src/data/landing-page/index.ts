@@ -27,6 +27,7 @@ export const calaogData = [
 
 export const products = [
   {
+    id: '1',
     name: 'Tenun Ikat Flores',
     ratting: 4.3,
     price: 900000,
@@ -34,6 +35,7 @@ export const products = [
     isBookmarked: false,
   },
   {
+    id: '2',
     name: 'Tenun Ikat Buton',
     ratting: 4.3,
     price: 900000,
@@ -41,6 +43,7 @@ export const products = [
     isBookmarked: true,
   },
   {
+    id: '3',
     name: 'Tenun Ikat Wasilomata',
     ratting: 4.3,
     price: 900000,
@@ -48,6 +51,7 @@ export const products = [
     isBookmarked: false,
   },
   {
+    id: '4',
     name: 'Tenun Ikat Wasilomata',
     ratting: 4.3,
     price: 900000,
@@ -55,6 +59,7 @@ export const products = [
     isBookmarked: false,
   },
   {
+    id: '5',
     name: 'Tenun Ikat Wasilomata',
     ratting: 4.3,
     price: 900000,
